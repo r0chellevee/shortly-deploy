@@ -7,8 +7,8 @@ module.exports = function(grunt) {
         seperator: ';'
       },
       dist: {
-        src: 'public/client/**/*.js',
-        dest: 'public/dist/build.js'
+        src: ['public/client/**/*.js'],
+        dest: 'public/dist/<%= pkg.name %>.js'
       }
     },
 
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 
     cssmin: {
       dist: {
-        files: 
+        files:
           'public/style.css'
       }
     },
